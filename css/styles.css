@@ -551,9 +551,9 @@ button {
 }
 
 .modal {
-  position: relative;
+  position: absolute;
   width: 408px;
-  height: 584px;
+  min-height: 584px;
   top: 50%;
   left: 50%;
   background-color: var(--modal-window);
@@ -583,7 +583,14 @@ button {
   align-items: center;
   justify-content: center;
   border: 1px solid rgba(0, 0, 0, 0.1);
-  
+  transition: fill var(--duration), background-color var(--duration);
+  outline: transparent;
+}
+
+.modal-close:hover,
+.modal-close:focus {
+  fill: var(--standart-white);
+  background-color: var(--pressed-state);
 }
 
 .modal-close:active {
@@ -592,10 +599,12 @@ button {
 
 }
 
+.footer-subscribe {
+  margin-left: 80px;
+}
+
 .subscribe-form {
   display: flex;
-  flex-direction: column;
-  margin-left: 80px;
 }
 
 .subscribe-wrap {
@@ -611,11 +620,15 @@ button {
   background-color: transparent;
   border-radius: 4px;
   margin-right: 24px;
-  color: var(--standart-white);
   padding-left: 16px;
-  font-size: 12px;
-  line-height: 2;
 }
+
+.subscribe-field::placeholder {
+    font-weight: 400;
+    line-height: 2;
+    letter-spacing: 0.04em;
+    color: rgba(255, 255, 255, 0.6);
+  }
 
 
 .subcribe-button {
@@ -656,9 +669,7 @@ background-color: var(--pressed-state);
 .modal-title {
   font-weight: 500;
   text-align: center;
-  font-size: 16px;
   line-height: 1.5;
-  max-width: 360px;
   margin-bottom: 16px;
 }
 
@@ -678,6 +689,12 @@ background-color: var(--pressed-state);
   border-color: var(--pressed-state);
 }
 
+.modal-field:hover + .modal-icon,
+.modal-field:focus + .modal-icon {
+  fill: var(--pressed-state);
+}
+
+
 .modal-text-area {
   resize: none;
   padding-left: 16px;
@@ -686,25 +703,25 @@ background-color: var(--pressed-state);
   height: 120px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
-  font-size: 12px;
-  line-height: 1.33;
-  color: rgba(117, 117, 117, 0.5);
   outline: transparent;
 }
 
-.modal-text-area:hover,
-.modal-text-area:focus {
-  border-color: var(--pressed-state);
-  }
+.modal-text-area::placeholder {
+  font-weight: 400;
+  line-height: 1.33;
+  color: rgba(117, 117, 117, 0.5);
+  letter-spacing: 0.04em;
+
+}
+
 
 .policy-wrap {
   display: flex;
   align-items: center;
-  margin-bottom: 24px;
+  margin-top: 16px;
 }
 
 .privacy-modal {
-  margin-bottom: 4px;
   margin-right: 8px;
   color: var(--dark-theme);
 }
@@ -732,7 +749,7 @@ background-color: var(--pressed-state);
   transition: background-color var(--duration), fill var(--duration), border var(--duration);
 }
 
-.privacy-modal:checked + .privacy-text {
+.privacy-modal:checked + .privacy-text .checkbox {
   background-color: var(--pressed-state);
   fill: var(--light-background);
   border: transparent;
@@ -765,8 +782,10 @@ background-color: var(--pressed-state);
   letter-spacing: 0.04em;
   color: var(--standart-white);
   transition: background-color var(--duration);
+  margin-top: 24px;
 }
 
+.modal-button:hover,
 .modal-button:focus {
   background-color: var(--pressed-state);
 }
@@ -779,9 +798,6 @@ background-color: var(--pressed-state);
 }
 
 
-.modal-name:focus .modal-icon {
-  fill: var(--pressed-state);
-}
 
 
 
