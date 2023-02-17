@@ -679,7 +679,7 @@ background-color: var(--pressed-state);
   border: 1px solid rgba(33, 33, 33, 0.2); 
   border-radius: 4px;
   padding-left: 38px;
-  transition: border-color var(--duration);
+  transition: border-color var(--duration), fill var(--duration);
   outline: transparent;
 
 }
