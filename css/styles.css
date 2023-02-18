@@ -621,6 +621,7 @@ button {
   border-radius: 4px;
   margin-right: 24px;
   padding-left: 16px;
+  color: var(--standart-white);
 }
 
 .subscribe-field::placeholder {
@@ -643,6 +644,10 @@ button {
   align-items: center;
   justify-content: space-around;
   transition: background-color var(--duration);
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: var(--standart-white);
 }
 
 .subcribe-button:hover,
