@@ -553,7 +553,7 @@ button {
 .modal {
   position: absolute;
   width: 408px;
-  min-height: 584px;
+  height: 584px;
   top: 50%;
   left: 50%;
   background-color: var(--modal-window);
@@ -625,6 +625,7 @@ button {
 
 .subscribe-field::placeholder {
     font-weight: 400;
+    font-size: 12px;
     line-height: 2;
     letter-spacing: 0.04em;
     color: rgba(255, 255, 255, 0.6);
@@ -708,6 +709,7 @@ background-color: var(--pressed-state);
 
 .modal-text-area::placeholder {
   font-weight: 400;
+  font-size: 12px;
   line-height: 1.33;
   color: rgba(117, 117, 117, 0.5);
   letter-spacing: 0.04em;
