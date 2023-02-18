@@ -705,6 +705,7 @@ background-color: var(--pressed-state);
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   outline: transparent;
+  transition: border-color var(--duration);
 }
 
 .modal-text-area::placeholder {
@@ -714,6 +715,11 @@ background-color: var(--pressed-state);
   color: rgba(117, 117, 117, 0.5);
   letter-spacing: 0.04em;
 
+}
+
+.modal-text-area:hover,
+.modal-text-area:focus{
+  border-color: var(--pressed-state);
 }
 
 
